@@ -406,12 +406,17 @@ footer {
 
 
 @media (max-width:768px) {
+  nav {
+    font-size: 14px;
+  }
+
   .hero {
     width: 100%;
   }
 
   .hero-inner {
     display: block;
+    padding-top: 70px;
   }
 
   .hero-text p {
