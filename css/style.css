@@ -29,6 +29,8 @@ body {
   counter-reset: section works-h3;
   color: var(--text-color);
   font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+
 }
 
 .inner {
@@ -199,7 +201,6 @@ nav li a:hover::after {
   font-size: 24px;
   background: linear-gradient(transparent 70%, var(--sub-title) 70%);
   width: fit-content;
-  /* display: inline; */
 }
 
 .section-subtitle::before {
@@ -318,14 +319,12 @@ td {
 .banner-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(13, 64px);
+  grid-auto-rows: minmax(64px, auto);
   gap: 32px;
-
   max-width: 800px;
   margin-inline: auto;
   margin-top: 80px;
 }
-
 
 .banner-text {
   background: #fff;
@@ -338,25 +337,24 @@ td {
 }
 
 .banner-01 {
-  grid-column: 1/2;
-  grid-row: 1/7;
+  grid-column: 1 / 2;
+  grid-row: 1 / span 6;
 }
 
 .banner-02 {
-  grid-column: 2/3;
-  grid-row: 2/8;
+  grid-column: 2 / 3;
+  grid-row: 2 / span 6;
 }
 
 .banner-03 {
-  grid-column: 1/2;
-  grid-row: 7/13;
+  grid-column: 1 / 2;
+  grid-row: 7 / span 6;
 }
 
 .banner-04 {
-  grid-column: 2/3;
-  grid-row: 8/14;
+  grid-column: 2 / 3;
+  grid-row: 8 / span 6;
 }
-
 
 /*About*/
 #about {
